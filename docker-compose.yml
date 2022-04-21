@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8-oracle
+    container_name: db-nest-test-project
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: nest-test-db
+    ports: ["3306:3306"]
+
+  adminer:
+    image: adminer
+    container_name: adminer-nest-test-project
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
