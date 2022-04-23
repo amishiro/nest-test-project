@@ -1,0 +1,6 @@
+# db -------
+
+# mysqlの永続化用ディレクトリ
+db/mysql/data/
+# mysqlのログ用ディレクトリ
+db/mysql/logs/
