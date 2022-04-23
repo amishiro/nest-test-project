@@ -1,21 +1,21 @@
 version: '3.8'
 services:
-  db:
+  mysql:
     image: mysql:8-oracle
-    container_name: db-nest-test-project
+    container_name: mysql-test-project
     volumes:
       - ./db/mysql/initdb.d:/docker-entrypoint-initdb.d # 初期化データを実行
       - ./db/mysql/data:/var/lib/mysql # 永続化用のディレクトリ
       - ./db/mysql/logs:/var/log/mysql # ログ出力用のディレクトリ
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: nest-test-db
+      MYSQL_DATABASE: test-db
     ports: ["3306:3306"]
 
   adminer:
     image: adminer
-    container_name: adminer-nest-test-project
+    container_name: adminer-test-project
     ports:
       - 8080:8080
     depends_on:
-      - db
+      - mysql
