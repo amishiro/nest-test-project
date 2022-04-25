@@ -1,13 +1,4 @@
-# db -------
-
-# mysqlのログ用ディレクトリ
-db/mysql/logs/
-
-# nest -------
-
-# compiled output
-/dist
-/node_modules
+# base(setting) -------
 
 # Logs
 logs
@@ -21,18 +12,6 @@ lerna-debug.log*
 # OS
 .DS_Store
 
-# Tests
-/coverage
-/.nyc_output
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
 
 # IDE - VSCode
 .vscode/*
@@ -40,3 +19,16 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# db(mysql) -------
+
+db/mysql/logs/
+
+# backend(nest & prisma) -------
+
+backend/dist
+backend/node_modules
+backend/prisma/migrations
+
+
+

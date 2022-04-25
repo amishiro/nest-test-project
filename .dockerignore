@@ -1,6 +1,10 @@
+# base(setting) -------
+
 .git/
 node_modules/
 
-# backend
+# backend(nest & prisma) -------
 
-backend/node_modules/
+backend/dist
+backend/node_modules
+backend/prisma/migrations
